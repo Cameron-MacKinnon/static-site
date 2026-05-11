@@ -19,7 +19,7 @@ class TextNode:
         self.url = url
 
     def __eq__(self, other):
-        if not isinstance(self, other):
+        if not isinstance(other, TextNode):
             return False
         if other.text != self.text:
             return False
