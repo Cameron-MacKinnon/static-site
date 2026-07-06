@@ -1,6 +1,6 @@
 import json
 
-import htmlnode
+import src.htmlnode as htmlnode
 from src.leafnode import LeafNode
 
 

@@ -1,9 +1,9 @@
 import json
 
-import htmlnode
+from src.htmlnode import HTMLNode
 
 
-class LeafNode(htmlnode.HTMLNode):
+class LeafNode(HTMLNode):
     def __init__(self, tag, value, props=None):
         super().__init__()
         self.tag = tag
