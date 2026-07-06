@@ -1,5 +1,7 @@
 from src.textnode import TextNode, TextType
 
+allowed_delimiters = ["`", "_", "**"]
+
 
 def check_delimiter_balance(text: str, delimiter: str):
     """Raises an error if the number of delimiters in a given string is odd"""
@@ -16,6 +18,9 @@ def split_nodes_delimiter(
     node of the passed text_type, whereas all other text chunks become plain
     text nodes)"""
     new_nodes = []
+
+    if delimiter not in allowed_delimiters:
+        raise ValueError(f'invalid delimiter argument "{delimiter}"')
 
     for node in old_nodes:
         # if an "old node" is not a TextType.TEXT type, just add it
